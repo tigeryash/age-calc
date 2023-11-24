@@ -1,0 +1,145 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 20px;
+  border-bottom-right-radius: 9rem;
+}
+
+
+.date-input{
+  display: flex;
+  justify-content: flex-start;
+
+  border-bottom: 1px solid lightgray;
+  position: relative;
+  padding-bottom: 50px;
+  padding-right: 9rem;
+}
+
+.date-input div{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.input-label{
+  color:hsl(0, 1%, 44%);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.red-label{
+  color:red;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.day, .month, .year{
+  width: 75%;
+  max-width: 150px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  padding: 5px 10px 0px 10px;
+  font-weight: bold;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.red-day, .red-month, .red-year{
+  width: 75%;
+  max-width: 150px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid red;
+  padding: 5px 10px 0px 10px;
+  font-weight: bold;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.date-input input:focus{
+  outline: none !important;
+  border: 1px solid hsl(259, 100%, 65%);
+}
+
+.date-input input::placeholder{
+  color: (0, 1%, 44%);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.button{
+  position: absolute;
+  bottom: -34px;
+  right: -10px;
+  background-color: hsl(259, 100%, 65%);
+  border: none;
+  border-radius: 50%;
+  height: 4.4rem;
+  width: 4.4rem;
+}
+
+.button img{
+  width: 60%;
+}
+
+.calculated{
+  margin-top: 40px;
+}
+
+.purple{
+  color: hsl(259, 100%, 65%);
+} 
+
+.calculated p{
+  font-size: 4rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.error-text{
+  color: hsl(0, 100%, 67%);
+  font-style: italic;
+  font-size: .5rem;
+  font-weight: 400;
+  position: absolute;
+  bottom: -25%;
+}
+
+@media screen and (max-width: 768px){
+  .App{
+    padding: 3rem 1.5rem;
+    margin:0 1rem;
+  }
+
+  .button{
+    position: absolute;
+    bottom: -25%;
+    right: 40%;
+  }
+
+  .date-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    padding-bottom: 4rem;
+  }
+
+  .date-input input{
+    padding-bottom: 5px;
+    margin: 0;
+  }
+
+  .calculated p{
+    font-size: 3rem;
+  }
+}
